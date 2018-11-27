@@ -13,32 +13,25 @@ namespace Task_3
     {
         static bool Odd(int a) //метод определения четных или нечетных чисел
         {
-            return a % 1 == 0; 
+            return a % 2 != 0; 
         }
+        
         static void Main(string[] args) //точка запуска
         {
             int n = 1;
             int x=0;
-            while (n > 0)
+            while (n != 0)
             {                
                 Console.Write("Введите число: ");
                 int m = Convert.ToInt32(Console.ReadLine());
                 
-                if (Odd(m) & m > 0)
+                if (Odd(m) && m>0)
                 {
                     x=x+m;
  
                 }
-
-
-                
-                //if (m % 1 == 0)
-                //{
-                //    x = x + m;
-
-                //}
-              
-                Console.WriteLine(x);
+                  
+                        
                 n = m;
              
             }
